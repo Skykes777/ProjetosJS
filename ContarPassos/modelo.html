@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estiloCSS.css">
+    <script src="script.js"></script>
+    <title>Modello</title>
+</head>
+<body>
+
+    <header>
+        <h1>Contar passos</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Início: <input type="number" name="Ti" id="Ti"></p>
+            <p>Fim: <input type="number" name="Tf" id="Tf"></p>
+            <p>Passos: <input type="number" name="Tp" id="Tp"></p>
+            <input type="button" value="CONTAR PASSOS" onclick="contar()" id="contaP">
+        </div>
+        <div id="resultado">
+            Preparando a contagem...
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Alejandro.0.M</p>
+    </footer>
+</body>
+</html>
