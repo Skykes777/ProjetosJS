@@ -3,8 +3,8 @@ function contar() {
     f = document.querySelector('input#Tf')
     p = document.querySelector('input#Tp')
     res = document.querySelector('div#resultado')
-    if (p.value.length == 0 || p.value <= 0 ) {
-        alert('[ERRO] O valor de passos não pode ser menor ou igual a zero!')
+    if (p.value.length == 0 || p.value <= 0 || i.value.length == 0 || f.value.length == 0) {
+        alert('[ERRO] O valor de passos não pode ser menor ou igual a zero, e as caixas de entrada não podem ser vazias!')
     } else {
         // Valores abaixo sendo alterados para number
         i = Number(i.value)
