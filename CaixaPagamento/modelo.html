@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estiloCSS.css">
+    <script src="script.js"></script>
+    <title>Modello</title>
+</head>
+<body>
+
+    <header>
+        <h1>Caixa de pagamento</h1>
+    </header>
+
+    <section>
+        <div>
+           <p>Preço: <input type="number" name="txnum" id="txnum"> <br> 
+            <input type="radio" name="xradio" id="avista" checked> A vista <br>
+            <input type="radio" name="xradio" id="nocartao"> No cartão <br>
+            <input type="radio" name="xradio" id="em5xv"> Em 5x <br>
+            <input type="button" value="Concluir Compra" onclick="concluirCompra()" id="bt"></p>
+        </div>
+        <div id="resposta">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Alejandro.0.M</p>
+    </footer>
+</body>
+</html>
