@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estiloCSS.css">
+    <title>Modello</title>
+</head>
+<body>
+
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>
+                Número (entre 1 e 100): 
+                <input type="number" name="fnum" id="fnum">
+                <input type="button" value="ADICIONAR" onclick="adicionar()" id="btad">
+                <select name="flista" id="flista" size="7"></select> <br>
+                <input type="button" value="FINALIZAR" onclick="finalizar()" id="btfnz">
+                <input type="button" value="LIMPAR" id="btfnz" onclick="limpar()">
+            </p>
+        </div>
+        <div id="resultado">
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <footer>
+        <p>&copy; Alejandro.0.M</p>
+    </footer>
+</body>
+</html>
