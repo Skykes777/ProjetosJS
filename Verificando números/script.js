@@ -29,17 +29,16 @@ function somaVetor(l) {
 
 function adicionar() {
     if (isNumero(num.value) && inLista(num.value, valores)) {
-        n = Number(num.value)
-        valores.push(n)
+        valores.push(Number(num.value))
         item = document.createElement('option')
-        item.text = `Número ${n} adicionado`
+        item.text = `Número ${num.value} adicionado`
         listaNuns.appendChild(item)
         res.innerHTML = ''
         num.value = ''
     } else {
-        alert('[ERRO] Coloque apenas valores númericos entre 1 e 100!')
-        num.value = ''
+        alert('[ERRO] Valor incorreto ou já adicionado a lista!')
     }
+    num.value = ''
 }
 
 function finalizar() {
@@ -60,4 +59,5 @@ function limpar() {
     valores = []
     listaNuns.innerText = ''
     res.innerHTML = ''
+    num.value = ''
 }
