@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estiloCSS.css">
+    <title>Modello</title>
+</head>
+<body>
+    <header>
+        <h1>Fornecimento de energia</h1>
+    </header>
+
+    <section>
+
+        <div>
+            <p>Consumo de energia em KWH: <input type="number" name="fkwh" id="fkwh"></p>
+            <p>
+                Instalação: 
+                <input type="radio" name="ops" id="residencial" checked> Residência 
+                <input type="radio" name="ops" id="industrial"> Indústrial
+                <input type="radio" name="ops" id="comercial"> Comercial
+            </p>
+                <p><input type="button" value="VERIFICAR GASTO" id="bt" onclick="verificarGasto()"></p>
+        </div>
+        <div>
+            <p id="resposta">
+                Resultado...
+            </p>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+    <footer>
+        <p>&copy; Alejandro.0.M</p>
+    </footer>
+</body>
+</html>
