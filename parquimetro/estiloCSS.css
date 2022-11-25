@@ -14,7 +14,7 @@ header {
 } 
 section {
     background-color: #ffffff;
-    max-width: 455px;
+    max-width: 400px;
     min-width: 300px;
     border-radius: 10px;
     margin: auto;
@@ -37,30 +37,22 @@ section p {
     
 }
 
-#fvelPer {
+#fnum {
     font-size: 0.9em;
     border-color: #00000028;
     border-radius: 4px;
-    width: 230px;
-}
-
-#fvelCon {
-    font-size: 0.9em;
-    border-color: #00000028;
-    border-radius: 4px;
-    width: 200px;
+    width: 150px;
 }
 
 #bt {
-    
     font-size: 0.8em;
     color: white;
     background-color: #23a5cdd8;
     border-color: transparent;
     border-radius: 4px;
-    padding: 5px;
-    display: block;
     margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #bt:active {
@@ -77,6 +69,11 @@ section p {
     margin-top: 15px;
     font-size: 1em;
     text-align: center;
+    line-height: 1.5em;
+}
+
+#flista {
+    width: 250px;
 }
 
 footer {
