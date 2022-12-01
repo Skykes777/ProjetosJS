@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estiloCSS.css">
+    <title>Modello</title>
+</head>
+
+<body>
+    <header>
+        <h1>Lista de Compras</h1>
+    </header>
+
+    <section>
+
+        <div id="entrada">
+            <div>
+                PRODUTO<br>
+                <input type="text" name="fent" id="fent" class="ent">
+            </div>
+            <div>
+                PREÇO<br>
+                <input type="number" name="fnum" id="fnum" class="ent">
+            </div>
+            <div><input type="button" value="ADICIONAR PRODUTO" onclick="adicionar()" id="btadd"></div>
+            <div><input type="button" value="FINALIZAR COMPRA" onclick="finalizar()" id="btfn"></div>
+        </div>
+        <div id="apresentação">
+            <select name="flista" id="flista" size="21px">
+                <option>
+                    N° | PRODUTO&emsp;| Quant&emsp;| PREÇO
+                </option>
+                <option>----------------------------------------------------</option>
+            </select>
+            </div>
+    </section>
+    <section class="resultado">
+        <div id="resposta"></div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <footer>
+        <p>&copy; Alejandro.0.M</p>
+    </footer>
+</body>
+
+</html>
