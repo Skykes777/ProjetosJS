@@ -1,6 +1,14 @@
 var fproduto = document.getElementById('fent');
 var fpreço = document.getElementById('fnum');
 var lista = document.getElementById('flista');
+var res = document.getElementById('resposta');
+var anome = document.getElementById('np'); // produto
+var qprod = document.getElementById('qt'); // quantidade
+var vprec = document.getElementById('pr'); // preço
+var resPÇ = document.getElementById('resulpreço'); // apresentação do valor a pagar
+var quantidadeV = document.getElementById('quantPV'); // quantidade de produtos vendidos no caixa
+var quantidadeD = document.getElementById('quantDC'); // quantidade de dinheiro no caixa
+
 var produtos = [];
 
 function adicionar() {
@@ -50,13 +58,40 @@ function adicionar() {
         }
         fproduto.value = '';
         fpreço.value = '';
+        anome.innerHTML = '';
+        qprod.innerHTML = '';
+        vprec.innerHTML = '';
+        resPÇ.innerHTML = '';
     }
 }
 
 function finalizar() {
     if (produtos.length == 0) {
-        alert('[ERRO] Adicione produtos para finalizar a compra!')
+        alert('[ERRO] Adicione produtos para finalizar a compra!');
     } else {
-        alert('Tudo OK!')
+        anome.innerHTML = '';
+        qprod.innerHTML = '';
+        vprec.innerHTML = '';
+        resPÇ.innerHTML = '';
+        
+        var totalPreço = 0;
+        for (v in produtos) {
+            totalPreço += produtos[v][2];
+        }
+        // apresentação do produto
+        for (n in produtos) {
+            anome.innerHTML += `${produtos[n][0]}<br>`;
+        }
+        // apresentação da quantidade
+        for (n in produtos) {
+            qprod.innerHTML += `${produtos[n][1]}<br>`;
+        }
+        // apresentação do preço
+        for (n in produtos) {
+            vprec.innerHTML += `${produtos[n][2].toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }) }<br>`;
+        }
+        resPÇ.innerHTML = `Total: ${totalPreço.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }) }`;
+
+        produtos = [];
     }
 }

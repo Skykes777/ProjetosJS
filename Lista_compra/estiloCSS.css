@@ -20,7 +20,7 @@ header {
 } 
 section {
     background-color: #ffffff;
-    max-width: 720px;
+    max-width: 1030px;
     min-width: 300px;
     border-radius: 10px;
     margin: auto;
@@ -31,9 +31,11 @@ section {
 }
 #entrada {
     border: solid 2px #0b833d;
-    width: 500px;
+    width: 445px;
     padding: 10px;
+    margin: auto;
     margin-right: 10px;
+    height: 326px;
     border-radius: 5px;
     font-family: var(--font-titulos);
     font-weight: lighter;
@@ -42,7 +44,7 @@ section {
     margin: 0;
     margin-bottom: 15px;
     line-height: 1.7em;
-    text-indent: 5px;
+    text-indent: 15px;
     font-size: 1.1em;
 }
 #apresentação {
@@ -51,13 +53,6 @@ section {
     width: 300px;
     padding: 0px;
     border-radius: 5px;
-}
-section h2 {
-    margin: 10px;
-    padding: 0;
-}
-section > p {
-    text-align: center;
 }
 .ent {
     font-size: 0.9em;
@@ -102,24 +97,84 @@ section > p {
 }
 #resposta {
     border:solid 1.5px #000000b1;
-    border-radius: 5px;
-    padding: 10px;
-    max-width: 97%;
+    background-color: #e9e9562c;
+    padding: 0px;
+    width: 276px;
+    height: 347px;
     margin: auto;
+    margin-left: -30px;
     font-size: 0.8em;
     text-align: center;
-    line-height: 1.5em;
+    overflow-y: scroll;
+}
+#resposta #titulo {
+    width: 253px;
+}
+#reposta p {
+    margin-top: -10px;
+}
+#resposta hr {
+    margin-top: -15px;
+    align-items: center;
+}
+#resposta #np {
+    width: 131px;
+    height: 274px;
+    background-color: #ffe4c400;
+    display: inline-block;
+    margin-bottom: 0px;
+    text-align: start;
+}
+#resposta #qt {
+    background-color: #dd861c00;
+    width: 35px;
+    height: 274px;
+    margin-left: -5px;
+    margin-bottom: 0px;
+    display: inline-block;
+    text-align: start;
+}
+#resposta #pr {
+    background-color: #ffe4c400;
+    width: 80px;
+    height: 274px;
+    margin-left: -5px;
+    margin-bottom: 0px;
+    display: inline-block;
+    text-align: end;
+}
+#resposta #resulpreço {
+    width: 246px;
+    padding: 3px;
+
+    margin-top: -2px;
 }
 #flista {
     width: 260px;
     padding: 5px;
     border: solid 2px black;
 }
-.resultado {
+#resultadoVendas {
+    margin-top: 5px;
+    max-width: 1027px;
     border-radius: 5px;
-    margin-top: 4px;
-    display: block;
-    background-color: #c8e7fc;
+    background-color: #addeff;
+    padding: 5px;
+    padding-left: 20px;
+}
+#resultadoVendas p {
+    padding: 0px;
+    margin: 0px;
+}
+#resultadoVendas #quantPV {
+    padding-left: 5px;
+    width: 100px;
+    height: 24px;
+}
+#resultadoVendas #quantDC {
+    padding-left: 5px;
+    width: 100px;
+    height: 24px;
 }
 footer {
     color: white;
