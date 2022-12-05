@@ -20,7 +20,7 @@ header {
 } 
 section {
     background-color: #ffffff;
-    max-width: 1030px;
+    max-width: 1080px;
     min-width: 300px;
     border-radius: 10px;
     margin: auto;
@@ -95,11 +95,64 @@ section {
     background-color: #a43112d8;
     transition-duration: 0.5s;
 }
+#flista {
+    width: 311px;
+    height: 347px;
+    margin-right: 40px;
+    padding: 0px;
+    border: solid 1px black;
+    overflow-y: scroll;
+}
+#ftitulo {
+    font-size: 0.7em;
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+    margin-bottom: -8px;
+}
+#Findice {
+    width:35px;
+    height: 300px;
+    display: inline-block;
+    margin-left: -7px;
+    margin-bottom: 0px;
+    font-size: 0.6em;
+    text-align: center;
+}
+#Fproduto {
+    display: inline-block;
+    width: 133px;
+    height: 300px;
+    padding: 1px;
+    background-color: #ffe4c400;
+    margin-left: -7px;
+    margin-bottom: 0px;
+    display: inline-block;
+    text-align: center;
+    font-size: 0.6em;
+}
+
+#Fquantidade {
+    display: inline-block;
+    width:44px;
+    height: 300px;
+    margin-left: -7px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 0.6em;
+}
+#Fpreço {
+    display: inline-block;
+    width: 80px;
+    height: 300px;
+    margin-left: -6px;
+    margin-bottom: 0px;
+    text-align: end;
+    font-size: 0.6em;
+}
 #resposta {
     border:solid 1.5px #000000b1;
     background-color: #e9e9562c;
-    padding: 0px;
-    width: 276px;
+    width: 290px;
     height: 347px;
     margin: auto;
     margin-left: -30px;
@@ -108,7 +161,8 @@ section {
     overflow-y: scroll;
 }
 #resposta #titulo {
-    width: 253px;
+    width: 266px;
+    text-align: center;
 }
 #reposta p {
     margin-top: -10px;
@@ -146,21 +200,16 @@ section {
 #resposta #resulpreço {
     width: 246px;
     padding: 3px;
-
     margin-top: -2px;
-}
-#flista {
-    width: 260px;
-    padding: 5px;
-    border: solid 2px black;
 }
 #resultadoVendas {
     margin-top: 5px;
-    max-width: 1027px;
+    max-width: 1090px;
     border-radius: 5px;
     background-color: #addeff;
     padding: 5px;
-    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 #resultadoVendas p {
     padding: 0px;

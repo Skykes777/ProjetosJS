@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estiloCSS.css">
-    <title>Modello</title>
+    <title>Sistema_caixa</title>
 </head>
 
 <body>
     <header>
-        <h1>Lista de Compras</h1>
+        <h1>Sistema de caixa para loja</h1>
     </header>
 
     <section>
@@ -28,14 +28,17 @@
             <div><input type="button" value="ADICIONAR PRODUTO" onclick="adicionar()" id="btadd"></div>
             <div><input type="button" value="FINALIZAR COMPRA" onclick="finalizar()" id="btfn"></div>
         </div>
-        <div id="apresentação">
-            <select name="flista" id="flista" size="21px">
-                <option>
-                    N° | PRODUTO&emsp;| Quant&emsp;| PREÇO
-                </option>
-                <option>----------------------------------------------------</option>
-            </select>
+        <div id="flista">
+            <div id="ftitulo">
+                N° &emsp;&emsp;PRODUTO &emsp;&emsp;Quant &emsp;PREÇO&emsp;<br>
+                -----------------------------------------------------------
             </div>
+            <div id="Findice"></div>
+            <div id="Fproduto"></div>
+            <div id="Fquantidade"></div>
+            <div id="Fpreço"></div>
+        </div>
+        
         <div id="resposta">
             <div id="titulo">
                 <p>Nota fiscal-Produtos</p>
@@ -48,7 +51,7 @@
         </div>
     </section>
     <section id="resultadoVendas">
-        <p>Operador(a): Alejandro&emsp;&emsp;&emsp; N°caixa: 01&emsp;&emsp;&emsp; Quant_produtos:<div id="quantPV">0</div>&emsp;&emsp;Total_dinheiro:<div id="quantDC">0</div></p>
+        <p>&emsp;&emsp;Operador(a): Alejandro&emsp;&emsp;&emsp; N°caixa: 01&emsp;&emsp;&emsp; Quant_produtos:<div id="quantPV">0</div>&emsp;&emsp;Total_dinheiro:<div id="quantDC">0</div></p>
     </section>
 
     <script src="script.js"></script>

@@ -1,6 +1,9 @@
 var fproduto = document.getElementById('fent');
 var fpreço = document.getElementById('fnum');
-var lista = document.getElementById('flista');
+var indice = document.getElementById('Findice'); // indice
+var produtoF = document.getElementById('Fproduto'); // nome do produto
+var quantidade = document.getElementById('Fquantidade'); // quantidade
+var preçoF = document.getElementById('Fpreço'); // preço
 var res = document.getElementById('resposta');
 var anome = document.getElementById('np'); // produto
 var qprod = document.getElementById('qt'); // quantidade
@@ -10,6 +13,8 @@ var quantidadeV = document.getElementById('quantPV'); // quantidade de produtos 
 var quantidadeD = document.getElementById('quantDC'); // quantidade de dinheiro no caixa
 
 var produtos = [];
+var totalVendas = 0;
+var totalDinheiro = 0;
 
 function adicionar() {
     if ((fproduto.value).trim().length == 0) {
@@ -43,18 +48,26 @@ function adicionar() {
         }
 
         // apresentação dos produtos adicionados na lista
-        lista.innerHTML = '';
-        var itemAP = document.createElement('option');
-        itemAP.innerHTML = 'N° | PRODUTO&emsp;| Quant&emsp;| PREÇO'; 
-        lista.appendChild(itemAP);
-        var itemAP = document.createElement('option');
-        itemAP.innerHTML = '----------------------------------------------------';
-        lista.appendChild(itemAP);
+        indice.innerHTML = '<br>';
+        produtoF.innerHTML = '<br>';
+        quantidade.innerHTML = '<br>';
+        preçoF.innerHTML = '<br>';
 
-        for (i in produtos) {
-            var item = document.createElement('option');
-            item.innerHTML = ` ${i}:&ensp; ${produtos[i][0]} -&emsp; ${produtos[i][1]} -&emsp; ${produtos[i][2].toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }) }`;
-            lista.appendChild(item);
+        // apresentação do indice
+        for (n in produtos) {
+            indice.innerHTML += `${n}<br>`;
+        }
+        // apresentação do produto
+        for (n in produtos) {
+            produtoF.innerHTML += `${produtos[n][0]}<br>`;
+        }
+        // apresentação da quantidade
+        for (n in produtos) {
+            quantidade.innerHTML += `${produtos[n][1]}<br>`;
+        }
+        // apresentação do preço
+        for (n in produtos) {
+            preçoF.innerHTML += `${produtos[n][2].toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}<br>`;
         }
         fproduto.value = '';
         fpreço.value = '';
@@ -69,6 +82,10 @@ function finalizar() {
     if (produtos.length == 0) {
         alert('[ERRO] Adicione produtos para finalizar a compra!');
     } else {
+        indice.innerHTML = '';
+        produtoF.innerHTML = '';
+        quantidade.innerHTML = '';
+        preçoF.innerHTML = '';
         anome.innerHTML = '';
         qprod.innerHTML = '';
         vprec.innerHTML = '';
@@ -92,6 +109,10 @@ function finalizar() {
         }
         resPÇ.innerHTML = `Total: ${totalPreço.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }) }`;
 
+        totalVendas = totalVendas+=produtos.length;
+        totalDinheiro = totalDinheiro+=totalPreço;
+        quantidadeV.innerText = `${totalVendas}`;
+        quantidadeD.innerHTML = `${totalDinheiro.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }) }`;
         produtos = [];
     }
 }
